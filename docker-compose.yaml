@@ -1,0 +1,10 @@
+services:
+  weather_app:
+    image: node:16
+    ports:
+      - 3000:3000
+    volumes:
+      - ./code:/app
+    working_dir: /app
+    tty: true
+    restart: always
