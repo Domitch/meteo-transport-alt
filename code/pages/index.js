@@ -21,6 +21,7 @@ export const App = () => {
 	}, []);
 
 	// Appel de l'API interne pour récupérer les données météo de la ville configurée
+	
 	useEffect(() => {
 		if (!city) return;
 
@@ -35,7 +36,8 @@ export const App = () => {
 		};
 
 		getData();
-	}, [city]);
+		console.log(`Rafraîchissement n°: ${triggerFetch}`);
+	}, [city,triggerFetch]);
 
 	// Rafraîchissement automatique des données toutes les heures
 	useEffect(() => {
